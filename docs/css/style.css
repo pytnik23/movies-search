@@ -1,0 +1,44 @@
+h1 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#searchInput {
+    margin-bottom: 30px;
+}
+
+#moviesTable {
+    display: none;
+}
+
+#moviesTable th {
+    padding: 0;
+    white-space: nowrap;
+}
+
+.sort-btn {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: .75em 1.5em .75em .75em;
+    text-align: left;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.sort-btn::after {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    display: inline-block;
+    transform: translateY(-50%);
+}
+
+.sort-btn_up::after {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.634 32.634" height="10"><path d="M16.317 32.634c-.276 0-.5-.224-.5-.5V.5c0-.276.224-.5.5-.5s.5.224.5.5v31.634c0 .276-.223.5-.5.5z"/><path d="M28.852 13.536c-.128 0-.256-.05-.354-.146L16.318 1.207 4.136 13.39c-.195.195-.512.195-.707 0s-.195-.512 0-.707L15.966.146c.093-.093.22-.146.353-.146.132 0 .26.053.353.146l12.533 12.536c.195.195.195.512 0 .707-.098.097-.226.146-.354.146z"/></svg>');
+}
+
+.sort-btn_down::after {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.634 32.634" height="10"><path d="M16.317 32.634c-.276 0-.5-.224-.5-.5V.5c0-.276.224-.5.5-.5s.5.224.5.5v31.634c0 .276-.224.5-.5.5z"/><path d="M16.315 32.634c-.133 0-.26-.053-.354-.146L3.43 19.95c-.195-.194-.195-.51 0-.706s.512-.195.707 0l12.18 12.183 12.183-12.183c.195-.195.512-.195.707 0s.195.512 0 .707L16.668 32.488c-.094.094-.22.147-.353.147z"/></svg>');
+}

@@ -12,13 +12,15 @@
     });
 
     function getData(str) {
-        fetch(`https://api.themoviedb.org/3/search/movie?api_key=100e19718c5c111cd812c685b760d2c3&query=${str}`)
-        .then(res => res.json())
-        .then(data => {
-            movies = data.results;
-            showTable(movies);
-        })
-        .catch(console.error);
+        const promise = fetch(`https://api.themoviedb.org/3/search/movie?api_key=100e19718c5c111cd812c685b760d2c3&query=${str}`);
+
+        promise
+            .then(res => res.json())
+            .then(data => {
+                movies = data.results;
+                showTable(movies);
+            })
+            .catch(console.error);
     }
 
     function showTable(movies) {
